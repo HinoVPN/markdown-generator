@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+/* 防止 body 滾動 */
+body {
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 簡約的 Markdown 預覽樣式 */
+.markdown-preview h1 {
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.markdown-preview h2 {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.markdown-preview h3,
+.markdown-preview h4,
+.markdown-preview h5,
+.markdown-preview h6 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
-.App-link {
-  color: #61dafb;
+.markdown-preview blockquote {
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  background-color: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+  border-radius: 0.25rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.markdown-preview code {
+  background-color: #f8f9fa;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  color: #d63384;
+}
+
+.markdown-preview pre {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.markdown-preview pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+.markdown-preview table {
+  margin: 1rem 0;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  padding-left: 2rem;
+}
+
+.markdown-preview li {
+  margin-bottom: 0.25rem;
+}
+
+/* 移除 Bootstrap nav-link 的按鈕樣式衝突 */
+.nav-link {
+  border: none !important;
+  background: none !important;
+}
+
+.nav-link:focus {
+  box-shadow: none !important;
 }
